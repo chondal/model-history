@@ -1,0 +1,30 @@
+{
+    "name": "chondal/model-history",
+    "description": "Guardar historial de acciones en un modelo.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jonathan",
+            "email": "jg.pradi@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Chondal\\ModelHistory\\": "src/"
+        }
+    },
+    "require-dev": {
+        "orchestra/testbench": "^4.6"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Chondal\\ModelHistory\\ModelHistoryServiceProvider"
+            ],
+            "aliases": {
+                "ModelHistory": "Chondal\\ModelHistory\\Facades\\ModelHistory"
+            }
+        }
+    }
+}
