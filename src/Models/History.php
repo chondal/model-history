@@ -32,7 +32,12 @@ class History extends Model
 
     public function getAuthorNameAttribute()
     {
-        return $this->author->name . ' | ' . $this->author->email;
+        if (!$this->author) {
+            return 'Sin usuario';
+        } else {
+            return $this->author->name . ' | ' . $this->author->email;
+        }
+
     }
 
     public function getCreatedAttribute()
